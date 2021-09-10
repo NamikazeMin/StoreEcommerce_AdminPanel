@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat',sans-serif;
+    box-sizing: border-box;
+}
+
+.container .content .product_liste
+{
+    max-height: 900px;
+    overflow-y: scroll;
+    border: 1px solid #E4E4E4;
+    border-radius: 2px;
+}
+.container .error_message
+{
+    display: none;
+}
+.container .error_message.active
+{
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+    background: rgb(241, 43, 43);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+   
+}
+.container .error_message.active p
+{
+    font-size: 16px;
+    word-break: break-all;
+}
+.container .content .product_search 
+{
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.container .content .product_search .errortext
+{
+    text-align: center;
+    margin: 0 auto 10px;
+    background-color: rgb(233, 24, 24);
+    max-width: 420px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    height: 0;
+    display: none;
+    transition: all .5s ease-in-out;
+}
+.active_error
+{
+    display: block !important;
+    height: auto !important;
+}
+.container .content .product_search .searchbox
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .content .product_search .searchbox input
+{
+    font-size: 18px;
+    width: 300px;
+    padding: 5px 10px;
+    outline:none;
+    height: 35px;
+    color: #333;
+    margin-right: 10px;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+.container .content .product_search .searchbox input:focus
+{
+    border-color: #3498db;
+}
+.container .content .product_search .searchbox button
+{
+    height: 35px;
+    font-size: 18px;
+    padding: 5px 25px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border:  1px solid #3498db;
+    border-radius: 3px;
+}
+.container .content .product_search .searchbox button:hover
+{
+    background-color: #4390c4;
+}
+.container .content .product_liste::-webkit-scrollbar
+{
+    width:0;
+}
+.container .content .product_liste table
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container .content .product_liste table tr th,
+.container .content .product_liste table tr td
+{
+    width: 20%;
+    text-align: center;
+    margin-bottom: 1px;
+}
+.container .content .product_liste table tr th
+{
+    background-color: #222;
+    color: #faf8f8;
+    padding: 10px;
+}
+.container .content .product_liste table tr td
+{
+    color: #333;
+    background-color: #fff;
+    font-weight: 700;
+    padding: 5px;
+}
+.container .content .product_liste table tr td img
+{
+    width: 80px;
+    height: 70px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+}
+.container .content .product_liste table tr td:last-of-type a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+.container .content .product_liste table tr td:last-of-type a i
+{
+    margin-right: 5px;
+}
+.container .content .product_liste table tr td:last-of-type #edit
+{
+    background-color: rgb(54, 207, 54);
+    margin:0 5px 5px 0;
+}
+.container .content .product_liste table tr td:last-of-type #delete
+{
+    background-color: rgb(214, 14, 14);
+}
+#add_to_order
+{
+    background-color: #3498db ;
+    width: 50%;
+}
+@media screen and (max-width:870px)
+{
+    .container .title
+    {
+        margin-top: 5px;
+        font-size: 40px !important; 
+    }
+    .container .content .form
+    {
+        margin: 5px auto !important;
+    }
+    .container .content .product_liste table tr td:last-of-type a
+    {
+        width: 100%;
+        font-size: 12px;
+        padding: 5px;
+    }
+    .container .content .product_liste table tr td
+    {
+        font-size: 15px;
+    }
+    #add_to_order
+    {
+        width: 100%;
+    }
+}
+@media screen and (max-width:630px)
+{
+    .container .content .product_liste table tr td:last-of-type a
+    {
+        font-size: 15px;
+    }
+    .container .content .form
+    {
+        width: 100%;
+    }
+    .container .content .product_search .searchbox input
+    {
+        width: 65%
+    }
+    .container .content .product_search .searchbox button
+    {
+        width: 30%;
+        padding: 5px 10px; 
+    }
+    .container .content .product_liste table tr td:last-of-type
+    {
+        padding: 5px 0;
+    }
+    .container .content .title
+    {
+        font-size: 25px !important;
+    }
+    .container .content .product_liste table tr th,
+    .container .content .product_liste table tr td
+    {
+        font-size: 12px;
+    }
+    .container .content .product_liste table tr td:last-of-type  a
+    {
+        font-size: 10px;
+        padding: 5px !important;
+    }
+    .container .content .product_liste table tr td img
+    {
+        width: 60px;
+        height: 50px;
+        border: 1px solid #3498db;
+        border-radius: 4px;
+    }
+    .error_network i
+    {
+        font-size: 18px !important;
+    }
+    .error_network p
+    {
+        font-size: 16px !important;
+    }
+}
+.container .content .return,
+.container .content .addnew
+{
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(85, 66, 255);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.container .content .return i,
+.container .content .addnew i
+{
+    margin-right: 5px;
+}
+
+
+/* Star Design Add Product */
+.container .content .form
+{
+    width: 95%;
+    margin:30px auto;
+    padding: 20px 10px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.container .content .form .col-1,
+.container .content .form .col-2
+{
+    flex-basis: 49%;
+    background-color: #E4E4E4;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(184, 182, 182);
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+.container .content .form .col-1 div,
+.container .content .form .col-2 div
+{
+    margin-bottom: 12px;
+    padding-left: 10px;
+}
+.container .content .form .col-1 div label,
+.container .content .form .col-2 div label
+{
+    display: block;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 7px;
+}
+.container .content .form .col-1 div input[type="text"],
+.container .content .form .col-1 div input[type="number"],
+.container .content .form .col-2 div input,
+.container .content .form .col-2 #select_cat,
+.container .content .form .col-2 #select_brande
+{
+    width: 90%;
+    font-size: 16px;
+    padding: 6px 10px;
+    outline: none;
+    height: 35px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    color: #333;
+    transition: all .2s ease-in-out;
+}
+.container .content .form .col-1 div input:focus,
+.container .content .form .col-2 div input:focus,
+.container .content .form  .col-1 textarea:focus,
+.container .content .form  .col-2 textarea:focus
+{
+    border-color: rgba(47, 165, 243, 0.767);
+    outline: none;
+}
+.container .content .form .col-1 .Product_pic input
+{
+    font-size: 18px;
+    color: #ff523b;
+}
+.container .content .form  .col-1 textarea,
+.container .content .form  .col-2 textarea
+{
+    width: 90%;
+    font-size: 16px;
+    padding: 6px 10px;
+    height: 170px;
+    outline: none;
+    border: 1px solid #333;
+    border-radius: 3px;
+    color: #333;
+    transition: all .2s ease-in-out;
+}
+.container .content .form .add button
+{
+    width: 90%;
+    height: 52px;
+    background-color: #3498db;
+    color: #fff;
+    border: 1px solid #3498db;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+}
+@media screen and (max-width:870px)
+{
+    .container .content .form .col-1 div,
+    .container .content .form .col-2 div
+    {
+        padding-left: 0;
+    }
+    .container .content .form .col-1 div input[type="text"],
+    .container .content .form .col-1 div input[type="number"],
+    .container .content .form .col-2 div input,
+    .container .content .form .col-2 #select_cat,
+    .container .content .form .col-2 #select_brande,
+    .container .content .form  .col-1 textarea,
+    .container .content .form  .col-2 textarea,
+    .container .content .form .add button
+    {
+        width: 100% !important;
+    }
+    .container .content .form
+    {
+        padding: 20px 0 !important;
+    }
+    .container .content .form .col-1 .Product_pic input
+    {
+        font-size: 15px;
+        color: #ff523b;
+    }
+    
+    .container .content .form
+    {
+        flex-direction: column;
+    }
+
+}
+
+
+/* Delete Page Design */
+.container .content .Rapport
+{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+.container .content .Rapport >div
+{
+    padding: 15px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.container .content .Rapport .Message.succes
+{
+    background-color: rgb(14, 212, 57);
+    color: #fff;
+}
+.container .content .Rapport .Message.error
+{
+    background-color: rgb(235, 29, 29);
+    color: #fff;
+}
+.container .content .Rapport .Message label
+{
+    font-weight: bold;
+    color: #fff;
+}
+.container .content .Rapport .redirect a
+{
+    display: inline-block;
+    text-decoration: none;
+    width: 220px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Error Network Design */
+.error_network
+{
+    background-color: rgb(255, 51, 0);
+    transition: all .3s ease-in-out;
+    position: absolute !important;
+    display: none;
+    top: 20px;
+    right: -40px;
+    padding:20px;
+    border: 1px solid red;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+.error_network i
+{
+    font-size: 25px;
+    margin-right: 10px;
+    width: 10%;
+    display: inline;
+}
+.error_network p
+{
+    font-size: 20px;
+    display: inline;
+    width: 90%;
+}
+.active_error_network
+{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    right: 10px;
+}
+
+/* Hide Label User Id */
+#order_id
+{
+    visibility: hidden;
+    display: none;
+    position: absolute;
+}

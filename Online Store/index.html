@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="#" id="loginform">
+            <div class="header">
+                <h2>Login Form</h2>
+            </div>
+            <div class="error_message" id="error_message">
+            </div>
+            <div class="username">
+                <label>Email  </label>
+                <input type="text" name="txtemail" id="txtemail" placeholder="Enter Your Email" autocomplete="off">
+            </div>
+            <div class="password">
+                <label>Password  </label>
+                <input type="password" name="txtpassword" id="txtpassword" placeholder="Enter Your Password" autocomplete="off">
+                <i class="fa fa-eye-slash" aria-hidden="true" id="showpassword"></i>             
+            </div>
+            <div class="button">
+                <input type="submit" name="submit" value="connecter" id="btnsubmit">
+            </div>
+            <div class="newmemeber">
+                <p>Not yet signed up? <a href="Pages/Sign_up.html"> Signup now</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="js/Loginform.js"></script>
+</body>
+</html>

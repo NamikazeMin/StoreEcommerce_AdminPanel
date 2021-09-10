@@ -1,0 +1,165 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat',sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #E4E4E4;
+}
+.container 
+{
+    width: 95%;
+    margin:60px auto;
+    min-height:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container .title
+{
+    text-align: center;
+    margin: 15px 0;
+    color: rgb(97, 92, 92);
+    font-size: 45px;
+}
+.container .header
+{
+    flex-basis: 18%;
+}
+.container .header .menu
+{
+    width: 100%;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    border-radius: 3px;
+}
+.container .header .menu li
+{
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgb(65, 65, 65);
+    border-bottom: 1px solid #ddd;
+    transition: background .3s ease-in-out;
+    height: 54px;
+    position: relative;
+}
+.container .header .menu li i
+{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #fff;
+}
+.menuselect
+{
+    background-color: #3498db !important;
+}
+.container .header .menu li:first-of-type
+{
+    display: none;
+}
+.container .header .menu li:last-of-type
+{
+        background-color: rgb(226, 47, 47);
+}
+.container .header .menu li:not(:last-of-type):hover
+{
+    background-color: #3498db;
+}
+.container .header .menu li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+
+@media screen and (max-width:870px)
+{
+    .container 
+    {
+        width: 100% !important;
+    }
+    .container .header
+    {
+        flex-basis: 20%;
+    }
+    .container .content
+    {
+        flex-basis: 80%;
+    }
+    .container .header .menu li a
+    {
+        font-size: 16px;
+    }
+    .container .header .menu li i
+    {
+        display: none;
+    }
+    .container .title
+    {
+        margin-top: 5px;
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:630px)
+{
+    .container
+    {
+        flex-direction: column;
+        width: 95% !important;
+    }
+    .container .header .menu li:first-of-type
+    {
+        display: block;
+    }
+    .container .header .menu
+    {
+        height: 54px;
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+    .container .header .menu li,
+    .container .header .menu li a
+    {
+        font-size: 22px;
+    }
+    .container .header 
+    {
+        flex-basis: 100%;
+    }
+    .container .content
+    {
+        flex-basis: 100%;
+    }
+    .container .title
+    {
+        margin-top: 5px;
+        font-size: 28px;
+    }
+}
+/* Star Content Css  */
+.active
+{
+    height: auto !important;
+    overflow: visible !important;
+}
+.container .content
+{
+    flex-basis:80%;
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding:10px 10px 40px 10px;
+    overflow-y: scroll;
+}
+.container .content::-webkit-scrollbar
+{
+    width: 0;
+}

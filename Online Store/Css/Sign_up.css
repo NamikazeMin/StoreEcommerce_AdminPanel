@@ -1,0 +1,186 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E4E4E4;
+}
+.container
+{
+    width: 350px;
+    max-width: 350px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 0 15px;
+    position: relative;
+    border: 1px solid rgb(236, 122, 56);
+    box-shadow: 2px 2px 5px 5px rgb(231, 229, 229),
+                 -2px -2px 5px 5px rgb(231, 229, 229);
+}
+.container .error_message
+{
+    display: none;
+}
+.container .error_message.active
+{
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #FFF3CD;
+    color: rgb(247, 36, 36);
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+   
+}
+.container .error_message.active p
+{
+    font-size: 16px;
+    word-break: break-all;
+}
+.container form
+{
+    width: 100%;
+    padding: 20px 0 10px;
+
+}
+.container form .header
+{
+    width: 100%;
+    padding: 5px 0 15px;
+    border-bottom: 1px solid rgba(27, 27, 27, 0.2);
+    margin-bottom: 10px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+.container form .header h2
+{
+    margin: 0;
+}
+.container form .header span
+{
+    color: red;
+}
+.container form .personinfo .firstname,
+.container form .personinfo .lastname,
+.container form .email,
+.container form .password,
+.container form .image
+{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.container form .personinfo .firstname label,
+.container form .personinfo .lastname label,
+.container form .email label,
+.container form .password label,
+.container form .image label
+{
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.container form .personinfo .firstname input,
+.container form .personinfo .lastname input,
+.container form .email input
+{
+    width: 100%;
+    font-size: 16px;
+    padding: 6px 10px;
+    outline: none;
+    height: 35px;
+    border: 1px solid #333;
+}
+.container form .password input
+{
+    width: 100%;
+    font-size: 16px;
+    padding: 6px 32px 6px 15px;
+    outline: none;
+    height: 40px;
+    border: 1px solid #333;
+}
+.container form .personinfo .firstname input:focus,
+.container form .personinfo .lastname input:focus,
+.container form .email input:focus,
+.container form .password input:focus
+{
+    border-color: red;
+}
+
+.container form .password i
+{
+    position: absolute;
+    right:10px;
+    top:60%;
+    color: rgb(138, 135, 135);
+    font-size: 18px;
+    cursor: pointer;
+}
+.container form .personinfo 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container form .personinfo > div
+{
+    flex-basis: 48%;
+}
+.container form .image input
+{
+    font-size: 16px;
+}
+.container form .button input
+{
+    display: inline-block;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 5px 0;
+  
+}
+.container form .oldmember
+{
+    padding:10px 0;
+    text-align: center;
+}
+.container form .oldmember p
+{
+    font-weight: 650;
+}
+.container form .oldmember p a
+{
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(29, 29, 29);
+}
+.container form .oldmember p a:hover
+{
+    text-decoration: underline;
+    color: red;
+}

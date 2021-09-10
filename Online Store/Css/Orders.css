@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat',sans-serif;
+    box-sizing: border-box;
+}
+.container .content .order_liste
+{
+    max-height: 700px;
+    overflow-y: scroll;
+    border: 1px solid #E4E4E4;
+    border-radius: 2px;
+}
+/* Error Add or update */
+.container .error_message
+{
+    display: none;
+}
+.container .error_message.active
+{
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(241, 43, 43);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+   
+}
+.container .error_message.active p
+{
+    font-size: 16px;
+    word-break: break-all;
+}
+.container .content .order_search 
+{
+    padding: 10px 0;
+    margin: 10px 0;
+}
+/* Error Search */
+.container .content .errortext
+{
+    text-align: center;
+    margin: 0 auto 10px;
+    background-color: rgb(233, 24, 24);
+    max-width: 420px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    height: 0;
+    display: none;
+    transition: all .5s ease-in-out;
+}
+.active_error
+{
+    display: block !important;
+    height: auto !important;
+}
+.container .content .order_search .searchbox
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .content .order_search .searchbox input
+{
+    font-size: 18px;
+    width: 300px;
+    padding: 5px 10px;
+    outline:none;
+    height: 35px;
+    color: #333;
+    margin-right: 10px;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+.container .content .order_search .searchbox input:focus
+{
+    border-color: #3498db;
+}
+.container .content .order_search .searchbox button
+{
+    height: 35px;
+    font-size: 18px;
+    padding: 5px 25px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border:  1px solid #3498db;
+    border-radius: 3px;
+}
+.container .content .order_search .searchbox button:hover
+{
+    background-color: #4390c4;
+}
+.container .content .order_liste::-webkit-scrollbar
+{
+    width:0;
+}
+
+.container .content .order_liste table,
+.container .content .order_info #user_order_table
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container .content .order_liste table tr th,
+.container .content .order_liste table tr td,
+.container .content .order_info #user_order_table tr th,
+.container .content .order_info #user_order_table tr td
+{
+    width: 20%;
+    text-align: center;
+    margin-bottom: 1px;
+}
+.container .content .order_liste table tr th,
+.container .content .order_info #user_order_table tr th
+{
+    background-color: #222;
+    color: #faf8f8;
+    padding: 10px;
+
+}
+.container .content .order_liste table tr td,
+.container .content .order_info #user_order_table tr td
+{
+    color: #333;
+    background-color: #fff;
+    font-weight: 700;
+    padding: 5px;
+}
+.container .content .order_info #user_order_table tr td
+{
+    padding: 10px;
+}
+.container .content .order_liste table tr td:last-of-type a,
+.container .content .order_info #user_order_table tr td:last-of-type a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+.container .content .order_liste table tr td:last-of-type a i,
+.container .content .order_info #user_order_table tr td:last-of-type a i
+{
+    margin-right: 5px;
+}
+.container .content .order_liste table tr td:last-of-type #edit
+{
+    background-color: rgb(54, 207, 54);
+    margin:0 5px 5px 0;
+}
+.container .content .order_liste table tr td:last-of-type #delete
+{
+    background-color: rgb(214, 14, 14);
+}
+@media screen and (max-width:870px)
+{
+    .container .content .order_liste table tr td:last-of-type a,
+    .container .content .order_info #user_order_table tr td:last-of-type a
+    {
+        width: 100%;
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+@media screen and (max-width:630px)
+{
+
+    .container .content .order_search .searchbox input
+    {
+        width: 65%
+    }
+    .container .content .order_search .searchbox button
+    {
+        width: 30%;
+        padding: 5px 10px; 
+    }
+    .container .content .order_liste table tr td:last-of-type,
+    .container .content .order_info #user_order_table tr td:last-of-type
+    {
+        padding: 5px 0;
+    }
+    .container .content .order_info #product_order_table tr td:last-of-type
+    {
+        padding: 3px 5px !important;
+    }
+    .container .content .order_liste table tr td,
+    .container .content .order_liste table tr th,
+    .container .content .order_info #user_order_table tr td,
+    .container .content .order_info #user_order_table tr th,
+    .container .content .order_info #product_order_table tr th,
+    .container .content .order_info #product_order_table tr td
+    {
+        font-size: 10px;
+    }
+    .container .content .order_liste table tr td:last-of-type  a,
+    .container .content .order_info #user_order_table tr td:last-of-type  a,
+    .container .content .order_info #product_order_table tr td:last-of-type  a
+    {
+        font-size: 10px;
+        padding: 5px !important;
+    }
+    .container .content .order_info h1
+    {
+        font-size: 25px !important;
+    }
+    .container .content .order_info #product_order_table tr td img
+    {
+        width: 60px !important;
+        height: 50px !important;
+    }
+    .container .content .order_info #product_order_table tr td:last-of-type a
+    {
+        width: 100% !important;
+    }
+}
+
+/*Star Design User Order*/
+.container .content .order_info #user_order_table
+{
+    margin-bottom: 50px;
+}
+.container .content .order_info #user_order_table tr td:last-of-type #change,
+.container .content .order_info #product_order_table tr td:last-of-type #change
+{
+    background-color: #3498db;
+}
+.container .content .order_info #product_order_table tr td:last-of-type a
+{
+    width: 80%;
+}
+.container .content .order_info #product_order_table tr td:last-of-type #delete
+{
+    background-color: red;
+}
+.container .content .order_info h1
+{
+    font-size: 30px;
+    color: rgb(75, 74, 74);
+    margin-bottom: 10px;
+}
+/*Star Design Products Order*/
+.container .content .order_info #product_order_table
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container .content .order_info #product_order_table tr th,
+.container .content .order_info #product_order_table tr td
+{
+    width: 20%;
+    text-align: center;
+    margin-bottom: 1px;
+}
+.container .content .order_info #product_order_table tr th
+{
+    background-color: #222;
+    color: #faf8f8;
+    padding: 10px;
+}
+.container .content .order_info #product_order_table tr td
+{
+    color: #333;
+    background-color: #fff;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.container .content .order_info #product_order_table tr td img
+{
+    width: 80px;
+    height: 70px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+}
+.container .content .order_info #product_order_table tr td:last-of-type a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+.container .content .order_info #product_order_table tr td:last-of-type a:first-of-type
+{
+    margin-bottom: 5px;
+}
+.container .content .order_info #product_order_table tr td:last-of-type a i
+{
+    margin-right: 5px;
+}
+.container .content .addnew
+{
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(85, 66, 255);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.container .content .addnew i
+{
+    margin-right: 5px;
+}
+.container .content .functions
+{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .content .functions a
+{
+    font-size: 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color:#fff;
+}
+.container .content .functions #cancel
+{
+    background-color:rgb(214, 14, 14);
+   
+}
+.container .content .functions #confirm
+{
+    background-color:  rgb(28, 173, 28);
+}
+@media screen and (max-width:400px)
+{
+    .container .content .functions
+    {
+        flex-direction: column;
+    }
+    .container .content .functions a
+    {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+/*Delete an order*/
+.container .content .Rapport
+{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+.container .content .Rapport >div
+{
+    padding: 15px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.container .content .Rapport .Message.succes
+{
+    background-color: rgb(14, 212, 57);
+    color: #fff;
+}
+.container .content .Rapport .Message.error
+{
+    background-color: rgb(235, 29, 29);
+    color: #fff;
+}
+.container .content .Rapport .Message label
+{
+    font-weight: bold;
+    color: #fff;
+}
+.container .content .Rapport .redirect a
+{
+    display: inline-block;
+    text-decoration: none;
+    width: 220px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}

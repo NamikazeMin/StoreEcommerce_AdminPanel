@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/Sign_up.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="#" id="signeupform" autocomplete="off">
+            <div class="header">
+                <h2>Sign Up</h2>
+            </div>
+            <div class="error_message" id="error_message">
+            </div>
+            <div class="personinfo">
+                <div class="firstname">
+                    <label>First Name</label>
+                    <input type="text" name="fname" id="txtfirstname" placeholder="First Name" autocomplete="off">
+                </div>
+                <div class="lastname">
+                    <label>Last Name</label>
+                    <input type="text" name="lname" id="txtlastname" placeholder="Last Name" autocomplete="off">
+                </div>
+            </div>
+            <div class="email">
+                <label>Email Address</label>
+                <input type="text" name="email" id="txtemail" placeholder="Enter your email" autocomplete="off">
+            </div>
+            <div class="password">
+                <label>Password </label>
+                <input type="password" name="txtpassword" id="txtpassword" placeholder="Enter Your Password" autocomplete="off">
+                <i class="fa fa-eye-slash" aria-hidden="true" id="showpassword"></i>             
+            </div>
+            <div class="button">
+                <input type="submit" name="submit" value="signe up" id="btnsubmit">
+            </div>
+            <div class="oldmember">
+                <p>Already signed up? <a href="../index.html"> Login now</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="../Js/Signe_up.js"></script>
+</body>
+</html>
